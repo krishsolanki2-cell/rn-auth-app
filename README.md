@@ -40,5 +40,4 @@ bundle exec pod install
 
 npm run ios
 
-Screenshots / Demo
-Note: Insert your screenshots or video link here to demonstrate the app's functionality.
+Demo link: https://drive.google.com/file/d/1XB6aqrB_V6pnRob64vblPU_r3yhPaabH/view?usp=drive_link
