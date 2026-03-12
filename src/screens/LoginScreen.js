@@ -9,11 +9,16 @@ export default function LoginScreen({ navigation }) {
   const [error, setError] = useState('');
 
   const handleLogin = async () => {
-    const result = await login(email, password);
-    if (!result.success) {
-      setError(result.error);
-    }
-  };
+  const result = await login(email, password);
+
+  if (!result.success) {
+    setError(result.error);
+  } else {
+    setError('');
+    alert('Login successful!'); // temporary feedback
+    navigation.navigate('Home'); // navigate to your main screen
+  }
+};
 
   return (
     <View style={styles.container}>

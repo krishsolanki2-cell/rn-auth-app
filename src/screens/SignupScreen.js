@@ -10,11 +10,15 @@ export default function SignupScreen({ navigation }) {
   const [error, setError] = useState('');
 
   const handleSignup = async () => {
-    const result = await signup(name, email, password);
-    if (!result.success) {
-      setError(result.error);
-    }
-  };
+  const result = await signup(name, email, password);
+
+  if (!result.success) {
+    setError(result.error);
+  } else {
+    setError('');
+    alert('Signup successful!'); // temporary feedback
+    navigation.navigate('Login');
+  }
 
   return (
     <View style={styles.container}>
